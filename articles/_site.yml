@@ -2,7 +2,7 @@ name: "opinion-dynamics"
 title: "Opinion Dynamics"
 description: |
   Opinion Dynamics
-output_dir: "docs"
+output_dir: "../docs"
 navbar:
   right:
     - text: "Home"
