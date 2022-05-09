@@ -85,31 +85,51 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Opinion Dynamics</title>
+  <title>Opinion Dynamics: Linear Consensus Model</title>
 
-  <meta property="description" itemprop="description" content="Welcome to the website. I hope you enjoy it!"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Opinion Dynamics"/>
+  <meta property="og:title" content="Opinion Dynamics: Linear Consensus Model"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Welcome to the website. I hope you enjoy it!"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Opinion Dynamics"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Opinion Dynamics"/>
-  <meta property="twitter:description" content="Welcome to the website. I hope you enjoy it!"/>
+  <meta property="twitter:title" content="Opinion Dynamics: Linear Consensus Model"/>
 
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Opinion dynamics and bounded confidence models, analysis, and simulation;citation_publication_date=2002;citation_author=Rainer Hegselmann;citation_author=Ulrich Krause;citation_author=Opinion dynamics and bounded confidence models, analysis, and simulation"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["Opinion Dynamics"]},{"type":"character","attributes":{},"value":["Welcome to the website. I hope you enjoy it!\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Linear Consensus Model"]},{"type":"character","attributes":{},"value":["distill::distill_article"]},{"type":"character","attributes":{},"value":["bibliography.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2057,7 +2077,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Opinion Dynamics","description":"Welcome to the website. I hope you enjoy it!","authors":[]}
+{"title":"Linear Consensus Model","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2079,15 +2099,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Opinion Dynamics</h1>
+<h1>Linear Consensus Model</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Welcome to the website. I hope you enjoy it!</p></p>
+
 </div>
 
 
 <div class="d-article">
+<p>For a long time, opinion dynamics were not studied beyond a scope of a localized group. There was a very popular empirical paradigm called sociometrics which made it possible to obtain detailed information on the social relationships of people in coherent social groups that were studied over an extended period of time. The spread and dynamics of opinions were studied either on networks that were obtained like this or in a theoretical framework, but at a similar scope. Afterall, computers were not readily available to everyone and programming took a lot of effort.</p>
+<p>The model that Hegselmann and Krause call the <em>Classical Model of Opinion Dynamics</em> <span class="citation" data-cites="hegselmann2002opinion">(<a href="#ref-hegselmann2002opinion" role="doc-biblioref">Hegselmann, Krause, and others 2002</a>)</span> is defined as follows:</p>
+<p>We have a group of <span class="math inline">\(n\)</span> agents. For simplicity, we assume that all agents interact in each step. This is called <a href="./complete-mixing.html"><strong>complete mixing</strong></a>. Each agent has an opinion that is represented by a scalar between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> with <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> representing the extreme opinions. An <strong>opinion profile</strong> is thus given by a vector of length <span class="math inline">\(n\)</span> (the agent count) <span class="math inline">\(x(t)\)</span> where <span class="math inline">\(t\)</span> is the current time step and <span class="math inline">\(x_i(t)\)</span> is the opinion of agent <span class="math inline">\(i\)</span> at time <span class="math inline">\(t\)</span>. Additionally, we have a weight matrix <span class="math inline">\(A\)</span> where entry <span class="math inline">\(A_{i, j}\)</span> denotes the weight agent <span class="math inline">\(i\)</span> places on the opinion of agent <span class="math inline">\(j\)</span>. In concrete terms, this can be thought of as how “trustworthy” agent <span class="math inline">\(i\)</span> thinks agent <span class="math inline">\(j\)</span> is.</p>
+<p>The opinions at time <span class="math inline">\(t+1\)</span> are computed with a simple weighted average, which in matrix terms would be:</p>
+<p><span class="math display">\[
+x(t+1) = Ax(t)
+\]</span></p>
+<p>Defined in a non-recursive way, this would be:</p>
+<p><span class="math display">\[
+x(t_n) = A^n(t_0)
+\]</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-hegselmann2002opinion" class="csl-entry" role="doc-biblioentry">
+Hegselmann, Rainer, Ulrich Krause, and others. 2002. <span>“Opinion Dynamics and Bounded Confidence Models, Analysis, and Simulation.”</span>
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2095,11 +2131,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
