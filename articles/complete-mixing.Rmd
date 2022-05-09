@@ -1,0 +1,17 @@
+---
+title: "Complete Mixing"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+Complete mixing denotes the feature of an agent-based model, that all agents interact with each other in every time step.
+In graph terms, you can think of this as agents being connected by a complete graph and interacting with all their neighbors.
+
+
+
+
+
