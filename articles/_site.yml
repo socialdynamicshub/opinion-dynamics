@@ -7,6 +7,12 @@ navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "Models"
+      menu:
+        - text: "Linear Consensus Model"
+          href: linear-consensus-model.html
+        - text: "Complete Mixing Model"
+          href: complete-mixing.html
     - text: "About"
       href: about.html
 output: distill::distill_article

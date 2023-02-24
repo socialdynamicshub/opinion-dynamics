@@ -6,14 +6,14 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-05-09T10:26:56+02:00"
+      "last_modified": "2023-02-24T23:14:59+01:00"
     },
     {
       "path": "complete-mixing.html",
       "title": "Complete Mixing",
       "author": [],
-      "contents": "\nComplete mixing denotes the feature of an agent-based model, that all agents interact with each other in every time step. In graph terms, you can think of this as agents being connected by a complete graph and interacting with all their neighbors.\n\n\n\n",
-      "last_modified": "2022-05-09T10:26:57+02:00"
+      "contents": "\nComplete mixing denotes the feature of an agent-based model, that all\nagents interact with each other in every time step. In graph terms, you\ncan think of this as agents being connected by a complete graph and\ninteracting with all their neighbors.\n\n\n\n",
+      "last_modified": "2023-02-24T23:15:00+01:00"
     },
     {
       "path": "index.html",
@@ -21,14 +21,14 @@
       "description": "Welcome to the website. I hope you enjoy it!\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-05-09T10:26:57+02:00"
+      "last_modified": "2023-02-24T23:15:00+01:00"
     },
     {
       "path": "linear-consensus-model.html",
       "title": "Linear Consensus Model",
       "author": [],
-      "contents": "\nFor a long time, opinion dynamics were not studied beyond a scope of a localized group. There was a very popular empirical paradigm called sociometrics which made it possible to obtain detailed information on the social relationships of people in coherent social groups that were studied over an extended period of time. The spread and dynamics of opinions were studied either on networks that were obtained like this or in a theoretical framework, but at a similar scope. Afterall, computers were not readily available to everyone and programming took a lot of effort.\nThe model that Hegselmann and Krause call the Classical Model of Opinion Dynamics (Hegselmann, Krause, and others 2002) is defined as follows:\nWe have a group of \\(n\\) agents. For simplicity, we assume that all agents interact in each step. This is called complete mixing. Each agent has an opinion that is represented by a scalar between \\(0\\) and \\(1\\) with \\(0\\) and \\(1\\) representing the extreme opinions. An opinion profile is thus given by a vector of length \\(n\\) (the agent count) \\(x(t)\\) where \\(t\\) is the current time step and \\(x_i(t)\\) is the opinion of agent \\(i\\) at time \\(t\\). Additionally, we have a weight matrix \\(A\\) where entry \\(A_{i, j}\\) denotes the weight agent \\(i\\) places on the opinion of agent \\(j\\). In concrete terms, this can be thought of as how “trustworthy” agent \\(i\\) thinks agent \\(j\\) is.\nThe opinions at time \\(t+1\\) are computed with a simple weighted average, which in matrix terms would be:\n\\[\nx(t+1) = Ax(t)\n\\]\nDefined in a non-recursive way, this would be:\n\\[\nx(t_n) = A^n(t_0)\n\\]\n\n\n\nHegselmann, Rainer, Ulrich Krause, and others. 2002. “Opinion Dynamics and Bounded Confidence Models, Analysis, and Simulation.”\n\n\n\n\n",
-      "last_modified": "2022-05-09T10:26:58+02:00"
+      "contents": "\nFor a long time, opinion dynamics were not studied beyond a scope of\na localized group. There was a very popular empirical paradigm called\nsociometrics which made it possible to obtain detailed information on\nthe social relationships of people in coherent social groups that were\nstudied over an extended period of time. The spread and dynamics of\nopinions were studied either on networks that were obtained like this or\nin a theoretical framework, but at a similar scope. Afterall, computers\nwere not readily available to everyone and programming took a lot of\neffort.\nThe model that Hegselmann and Krause call the Classical Model of\nOpinion Dynamics (Hegselmann, Krause, et al. 2002) is\ndefined as follows:\nWe have a group of \\(n\\) agents. For\nsimplicity, we assume that all agents interact in each step. This is\ncalled complete\nmixing. Each agent has an opinion that is represented by a\nscalar between \\(0\\) and \\(1\\) with \\(0\\) and \\(1\\) representing the extreme opinions. An\nopinion profile is thus given by a vector of length\n\\(n\\) (the agent count) \\(x(t)\\) where \\(t\\) is the current time step and \\(x_i(t)\\) is the opinion of agent \\(i\\) at time \\(t\\). Additionally, we have a weight matrix\n\\(A\\) where entry \\(A_{i, j}\\) denotes the weight agent \\(i\\) places on the opinion of agent \\(j\\). In concrete terms, this can be thought\nof as how “trustworthy” agent \\(i\\)\nthinks agent \\(j\\) is.\nThe opinions at time \\(t+1\\) are\ncomputed with a simple weighted average, which in matrix terms would\nbe:\n\\[\nx(t+1) = Ax(t)\n\\]\nDefined in a non-recursive way, this would be:\n\\[\nx(t_n) = A^n(t_0)\n\\]\n\n\n\nHegselmann, Rainer, Ulrich Krause, et al. 2002. “Opinion Dynamics\nand Bounded Confidence Models, Analysis, and Simulation.”\n\n\n\n\n",
+      "last_modified": "2023-02-24T23:15:01+01:00"
     }
   ],
   "collections": []

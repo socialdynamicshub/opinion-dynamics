@@ -2089,6 +2089,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Models
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="linear-consensus-model.html">Linear Consensus Model</a>
+<a href="complete-mixing.html">Complete Mixing Model</a>
+</div>
+</div>
 <a href="about.html">About</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
@@ -2107,10 +2118,44 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<p>For a long time, opinion dynamics were not studied beyond a scope of a localized group. There was a very popular empirical paradigm called sociometrics which made it possible to obtain detailed information on the social relationships of people in coherent social groups that were studied over an extended period of time. The spread and dynamics of opinions were studied either on networks that were obtained like this or in a theoretical framework, but at a similar scope. Afterall, computers were not readily available to everyone and programming took a lot of effort.</p>
-<p>The model that Hegselmann and Krause call the <em>Classical Model of Opinion Dynamics</em> <span class="citation" data-cites="hegselmann2002opinion">(<a href="#ref-hegselmann2002opinion" role="doc-biblioref">Hegselmann, Krause, and others 2002</a>)</span> is defined as follows:</p>
-<p>We have a group of <span class="math inline">\(n\)</span> agents. For simplicity, we assume that all agents interact in each step. This is called <a href="./complete-mixing.html"><strong>complete mixing</strong></a>. Each agent has an opinion that is represented by a scalar between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> with <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> representing the extreme opinions. An <strong>opinion profile</strong> is thus given by a vector of length <span class="math inline">\(n\)</span> (the agent count) <span class="math inline">\(x(t)\)</span> where <span class="math inline">\(t\)</span> is the current time step and <span class="math inline">\(x_i(t)\)</span> is the opinion of agent <span class="math inline">\(i\)</span> at time <span class="math inline">\(t\)</span>. Additionally, we have a weight matrix <span class="math inline">\(A\)</span> where entry <span class="math inline">\(A_{i, j}\)</span> denotes the weight agent <span class="math inline">\(i\)</span> places on the opinion of agent <span class="math inline">\(j\)</span>. In concrete terms, this can be thought of as how “trustworthy” agent <span class="math inline">\(i\)</span> thinks agent <span class="math inline">\(j\)</span> is.</p>
-<p>The opinions at time <span class="math inline">\(t+1\)</span> are computed with a simple weighted average, which in matrix terms would be:</p>
+<p>For a long time, opinion dynamics were not studied beyond a scope of
+a localized group. There was a very popular empirical paradigm called
+sociometrics which made it possible to obtain detailed information on
+the social relationships of people in coherent social groups that were
+studied over an extended period of time. The spread and dynamics of
+opinions were studied either on networks that were obtained like this or
+in a theoretical framework, but at a similar scope. Afterall, computers
+were not readily available to everyone and programming took a lot of
+effort.</p>
+<p>The model that Hegselmann and Krause call the <em>Classical Model of
+Opinion Dynamics</em> <span class="citation"
+data-cites="hegselmann2002opinion">(<a href="#ref-hegselmann2002opinion"
+role="doc-biblioref">Hegselmann, Krause, et al. 2002</a>)</span> is
+defined as follows:</p>
+<p>We have a group of <span class="math inline">\(n\)</span> agents. For
+simplicity, we assume that all agents interact in each step. This is
+called <a href="./complete-mixing.html"><strong>complete
+mixing</strong></a>. Each agent has an opinion that is represented by a
+scalar between <span class="math inline">\(0\)</span> and <span
+class="math inline">\(1\)</span> with <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(1\)</span> representing the extreme opinions. An
+<strong>opinion profile</strong> is thus given by a vector of length
+<span class="math inline">\(n\)</span> (the agent count) <span
+class="math inline">\(x(t)\)</span> where <span
+class="math inline">\(t\)</span> is the current time step and <span
+class="math inline">\(x_i(t)\)</span> is the opinion of agent <span
+class="math inline">\(i\)</span> at time <span
+class="math inline">\(t\)</span>. Additionally, we have a weight matrix
+<span class="math inline">\(A\)</span> where entry <span
+class="math inline">\(A_{i, j}\)</span> denotes the weight agent <span
+class="math inline">\(i\)</span> places on the opinion of agent <span
+class="math inline">\(j\)</span>. In concrete terms, this can be thought
+of as how “trustworthy” agent <span class="math inline">\(i\)</span>
+thinks agent <span class="math inline">\(j\)</span> is.</p>
+<p>The opinions at time <span class="math inline">\(t+1\)</span> are
+computed with a simple weighted average, which in matrix terms would
+be:</p>
 <p><span class="math display">\[
 x(t+1) = Ax(t)
 \]</span></p>
@@ -2118,10 +2163,14 @@ x(t+1) = Ax(t)
 <p><span class="math display">\[
 x(t_n) = A^n(t_0)
 \]</span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-hegselmann2002opinion" class="csl-entry" role="doc-biblioentry">
-Hegselmann, Rainer, Ulrich Krause, and others. 2002. <span>“Opinion Dynamics and Bounded Confidence Models, Analysis, and Simulation.”</span>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="doc-bibliography">
+<div id="ref-hegselmann2002opinion" class="csl-entry"
+role="doc-biblioentry">
+Hegselmann, Rainer, Ulrich Krause, et al. 2002. <span>“Opinion Dynamics
+and Bounded Confidence Models, Analysis, and Simulation.”</span>
 </div>
 </div>
 <!--radix_placeholder_article_footer-->
