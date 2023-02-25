@@ -2,6 +2,19 @@
 title: "Opinion Dynamics"
 description: |
   Welcome to the website. I hope you enjoy it!
+author:
+  - name: André Calero Valdez
+    url: https://calerovaldez.com
+    affiliation: Universität zu Lübeck
+    affiliation_url: https://www.imis.uni-luebeck.de
+  - name: Hendrik Nunner
+    affiliation: Universität zu Lübeck
+    affiliation_url: https://www.imis.uni-luebeck.de
+  - name: Luisa Vervier
+    affiliation: RWTH Aachen University
+    affiliation_url: https://comm.rwth-aachen.de
+  - name: Johannes Nakayama
+    affiliation: RWTH Aachen University
 site: distill::distill_website
 ---
 
